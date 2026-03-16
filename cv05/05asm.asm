@@ -10,7 +10,6 @@ swap:
 	ret
 
 division:
-division:
     mov r8, rdx        ; uložíme pointer na result
 
     mov eax, edi       ; eax = x
