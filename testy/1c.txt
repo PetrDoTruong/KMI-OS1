@@ -1,0 +1,23 @@
+Operační systémy 1 (KMI/OS1): Zápočtový test 1c
+Datum: 1. dubna 2025
+Jméno a příjmení:
+Řada / místo:
+
+Všechny otázky se týkají architektury AMD64 a operačního systému Linux, jak byly používány na cvičeních.
+
+1. V registru rdx máte uloženou hodnotu n. Napište v assembleru kód, který do registru rdx uloží hodnotu n3 (na třetí). Je možné použít libovolné vhodné registry, avšak není možné použít instrukce skoků. Pro násobení použijte instrukci mul. (2 body)
+
+2. Napište instrukci, která do registru rax uloží hodnotu, která je na vrcholu zásobníku, pričemž zásobník zůstane nezměněn. (1 bod)
+
+3. Co je v následujícím kódu špatně? Chyby opravte. (2 body)
+ print_stars:
+	mov rcx, 10 
+cyklus:
+	mov rsi, 42 	; znak '*' 
+	mov al, 0 
+	call putchar 	; int putchar (int) -- vypíše právě jeden znak 
+	sub rcx, 1 
+	jnz cyklus 
+	ret
+
+4. Napište v assembleru funkci void ordered (unsigned short *a, unsigned short *b), která prohodí hodnoty dané ukazateli a a b, pokud bude hodnota (*b) větší než (*a). Kód napište tak, aby jej šlo přeložit a volat z jazyka C. (5 bodů)

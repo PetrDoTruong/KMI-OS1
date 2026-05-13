@@ -1,0 +1,37 @@
+Operační systémy 1 (KMI/OS1): Zápočtový test 2a
+
+Všechny otázky se týkají architektury AMD64 a operačních systémů Linux a Windows, jak byly používány na cvičeních.
+
+1. Jaká hodnota bude v registru el po provedení následujících instrukcí? (1 bod)
+
+	mov el, 13
+	mov dl, 140
+	cmp el, dl
+	jb foo
+	mov el, 250
+foo:
+
+2. Jaká hodnota bude v registru eax po provedení následujícího kódu? (1 bod)
+	mov eax, 17
+	mov есх, 4
+	idiv acx
+
+3. Pokud chceme v externím assembleru vytvořit oblast paměti o velikosti 1024 B, kam načteme data např. pomocí systémového voláni SYS_GETCWD, kde a jak to uděláme? Napište kód, který umožní pracovat s touto oblasti paměti pomoci návěstí input_data. (Kód systémového volání nepište.) (2 body)
+
+4. Proč máme pro spuštění procesu dvě funkce CreateProcessA, CreateProcessW, ale pro vytvoření vlákna máme pouze jednu funkci CreateThread? (1 bod)
+
+5. Když spustíme následující program, kolikrát se vypíše text "Hello"? Znázorněte vztah (rodič-potomek) mez vytvořenými procesy: (2 body)
+
+#include <unistd.b>
+int main() {
+	printf("Hello\n");
+	fork();
+	fork();
+	printf("Hello\n");
+}
+
+6. Napište v assembleru funkci char *my_strdup(char *s), která vytvoří kopii řetězce s. Použijte volání následujících funkcí: (3 body)
+
+void *malloc(size_t size);
+size_t strlen(const char *s);
+void *memcpy(void *dest, void *src, size_t n)

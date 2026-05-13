@@ -9,6 +9,8 @@ swap:
 	mov [rsi], eax		; na adesu rsi zapíšu hodnotu eax
 	ret
 
+; edi/  esi/    edx/            ecx/
+; int x/ int y/ int *result/ int *remainder/
 division:
     mov r8, rdx        ; uložíme pointer na result
 
@@ -20,4 +22,3 @@ division:
     mov [rcx], edx     ; *remainder = edx
 
     ret
-	

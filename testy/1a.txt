@@ -1,0 +1,33 @@
+Operační systémy 1 (KMI/OS1): Zápočtový test 1a
+Datum: 1. dubna 2025
+Jméno a příjmení:
+Řada / místo:
+Všechny otázky se tykají architektury AMD64 a operačního systému Linux, jak byly používány na cvičeních.
+
+1. V registru rcx máte uloženou hodnotu. Jen s pomocí instrukcí sčítání a odčítání ji vynásobte třemi. (1 bod)
+
+2. Zjednodušte: (1 bod)
+
+foo:
+	; kod
+	sub esi, 1
+	cmp esi, 0
+	jne foo
+
+3. Jaká hodnota bude v registru eax po provedení následujícího kódu? (1 bod)
+	mov eax, 91
+	mov ecx, 10
+	idiv ecx
+
+4. Proč jsou v hlavičkovém souboru foo.h na začátku uvedeny následující řádky? (1 bod)
+	#ifndef F0O_H
+	#define FOO_H
+
+5. Předpokládejme, že v registru rbx máme uložený ukazatel na řetězec "hello world" (typu char *). Jaká hodnota bude v registru al po provedení následujícího kódu a proč? (2 body)
+
+	mov rdi, rbx
+	mov al, 0
+	call strlen
+	mov al, [rax + rbx]
+
+6. Napište v assembleru funkci void zamena(short *a, short *b), která prohodí hodnoty, které jsou dány ukazateli a a b. Kód napište tak, aby jej šlo přeložit a volat z jazyka C. (4 body)

@@ -1,0 +1,25 @@
+Zápočtový test 2d
+
+Všechny otázky se týkají architektury AMD64 a operačních systémů Linux a Windows, jak byly používány na cvičeních.
+
+1. Jaká hodnota bude v registru cl po provedení následujících instrukcí? (1 bod)
+
+	mov cl, 25
+	sub cl, 1
+	js foo
+	mov cl, 22
+foo:
+
+2. Pokud chceme v externím assembleru použit řetězec "Ahoj svete", např. abychom jej vypsali pomocí systémového volání SYS_WRITE, kde a jak jej uložíme? Napište kód, který umožní pracovat s tímto řetězcem pomocí návěstí greeting_str. (Kód systémového volání nepište.) (2 body)
+
+3. Jakou funkcí musíme ukončit práci s objekty, které nám vrátily funkce CreateFile a CreateThread z WinAPI? (1 bod)
+
+4. Kolikrát se v následujícím případě spustí program uname a proč? (2 bod)
+
+for (int i = 0; i < 10; i++) {
+	execlp("uname", "uname", NULL);
+}
+
+5. Kdy v Linuxu musíme vytvořit vlákno s atributem PTHREAD_CREATE_DETACHED? (1 bod)
+
+6. Napište v assembleru funkci unsigned long length(char *s), která se bude chovat jako funkce strlen ze standardní knihovny jazyka C. (3 body)

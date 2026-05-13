@@ -1,0 +1,38 @@
+Operační systémy 1 (KMI/OS1): Zápočtový test 2b
+Datum: 29. dubna 2025
+Jméno a příjmení: 
+
+Všechny otázky se tykají architektury AMD64 a operačních systémů Linux a Windows, jak byly používány na cvičeních.
+
+1. Pokud chceme v externím assembleru vytvořit oblast paměti o velikosti 4096 B, kam načteme data např. pomocí systémového volání SYS_GETCWD, kde a jak to uděláme? Napište kód, který umožní pracovat s touto oblastí paměti pomocí návěští local_buffer. (Kód systémového volání nepište.) (2 body)
+
+2. Jaká hodnota bude v registru eax po provedení následujícího kódu? (1 bod)
+	mov eax, 21
+	mov ecx, 7
+	idiv ecx
+
+3. Jaká hodnota bude v registru sil po provedení následujících instrukcí? (1 bod)
+	mov sil, 23
+	mov dil, 240
+	cmp sil, dil
+	j1 skip
+	mov sil, 150
+skip:
+
+4. Proč máme pro otevření souboru dvě funkce CreateFileA, CreateFileW, ale pro čtení ze souboru máme jen jednu funkci ReadFile? (1 bod)
+
+5. Napište v assembleru funkci char *my_strdup(char *s), která vytvoří kopii řetězce s. Použijte volání následujících funkcí: (3 body)
+
+	void *calloc(size_t nelem, size_t elsize);
+	size_t strlen(const char *s);
+	char *strcpy(char *dst, char *src);
+
+6. Když spustíme následující program, kolikrát se vypíše text "Ahoj svete!"? Znázorněte vztah (rodič-potomek) mezi vytvořenými procesy. (2 body)
+
+	#include <unistd.h>
+	int main() {
+		fork() ;
+		printf ("Ahoj svete!\.") ;
+		fork();
+		printf ("Ahoj svete! \n") ;
+	}
