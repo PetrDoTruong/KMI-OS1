@@ -4,6 +4,7 @@ long aritmetika(long a, long b, long c);
 long kombinace(long a, long b, long c, long d);
 void divide_and_store(int numerator, int denominator, int *quotiont, int *remainder);
 void ordered(unsigned short *a, unsigned short *b);
+extern unsigned long length(char *s);
 
 int main(){
     // vypocet
@@ -33,5 +34,10 @@ int main(){
     unsigned short y = 20;
     ordered(&x, &y);
     printf("x=10, y=20 vysledek (ocekavano 20, 10): a = %hu, b = %hu\n", x, y);
+
+    // len
+    char *text1 = "Ahoj svete";
+    printf("Delka retezce \"%s\" je: %lu\n", text1, length(text1));
+    
     return 0;
 }

@@ -3,6 +3,7 @@ global aritmetika
 global kombinace
 global divide_and_store
 global ordered
+global length
 
 section .text
 
@@ -46,4 +47,15 @@ ordered:
 b_greater:
     mov word [rdi], bx
     mov word [rsi], ax
+    ret
+
+length:
+    mov rax, 0      ; counter
+cyklus:
+    cmp byte [rdi], 0
+    je end
+    inc rdi
+    inc rax
+    jmp cyklus
+end:
     ret
